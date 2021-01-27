@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Card  from './carte'
 
 
 function App() {
@@ -23,12 +24,13 @@ function App() {
     <div className="App">
 
       <ul>
-        {users.map(users => (
-          <li key={users.id}>
+     
+        {users.map(users => ( <Card users={users}/>
+          /* <li key={users.id}>
             <h2>Name: {users.name}</h2>
             <h2>Email: {users.email}</h2>
                |
-          </li>
+          </li> */
         ))}
       </ul>
     </div>
